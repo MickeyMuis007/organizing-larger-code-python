@@ -1,0 +1,1 @@
+print("executing multi_reader_program/__main__.py")

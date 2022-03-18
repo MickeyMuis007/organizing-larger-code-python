@@ -25,3 +25,19 @@ Steps to make zip file executable:
     - python multi_reader_program.zip test.bz2
     - python multi_reader_program.zip test.gz
 ```
+
+### Executable Packages
+#### **Executing directories vs Packages**
+Executing a direcotry `python directory`:
+- "directory" added to sys.path
+- "directory/\_\_main\_\_.py" is not a package
+
+Executing a package `python -m directory
+- "directory" treaded as a package
+- "directory/\_\_main\_\_.py" is a submodule of the directory package
+
+#### **\_\_init\_\_.py vs \_\_main\_\_.py**
+- \_\_init\_\_.py
+    - Can execute any code it likes on import ...
+- \_\_main\_\_.py
+    - Only a package with \_\_main\_\_.py can be executed
